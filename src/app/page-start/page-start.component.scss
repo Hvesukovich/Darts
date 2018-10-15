@@ -1,0 +1,158 @@
+@import '../constants';
+
+.header {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+
+  .logo {
+    margin: 3% 0 0 5%;
+  }
+}
+
+.content {
+  max-width: 675px;
+  margin: auto;
+  color: $white;
+  font-family: sans-serif;
+
+  .title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .search-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .input-block, .btn-block {
+      width: 49%;
+    }
+
+    .input-block {
+      .input-search {
+        padding: 11px 10px 11px 20px;
+        font-size: 18px;
+        border: 0;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .btn-search {
+        background: $white;
+        border: 0;
+        position: relative;
+        float: right;
+        top: -33px;
+        right: 12px;
+        color: $blue;
+
+        .svg-search {
+          width: 1.45em;
+        }
+
+        .sr-only {
+          border: 0;
+          clip: rect(0, 0, 0, 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
+    }
+
+    .btn-block {
+      .btn {
+        font-size: 18px;
+        padding: 11px 10px 11px 20px;
+        border-radius: 4px;
+        background-color: $gold;
+        text-decoration: none;
+        color: $black;
+        display: block;
+        text-align: center;
+      }
+    }
+
+  }
+
+  .participants {
+    .participant-block {
+      display: flex;
+      background-color: $white;
+      color: $black;
+      padding: 10px 10px 10px 20px;
+      margin-bottom: 1px;
+      font-family: sans-serif;
+
+      .nick-name {
+        flex-basis: 49%;
+      }
+      .email {
+        flex-basis: 47%;
+      }
+      .del-participant {
+        flex-basis: 4%;
+        .svg-del {
+          width: 0.7em;
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .border-radius-top {
+      border-radius: 4px 4px 0 0;
+    }
+    .border-radius-bottom {
+      border-radius: 0 0 4px 4px;
+    }
+    .border-radius-all {
+      border-radius: 4px;
+    }
+  }
+
+  .choose-games-block {
+    margin: 50px 0 0 0;
+
+    .title {
+      color: $white;
+      margin-bottom: 20px;
+    }
+    .games-list {
+      .game {
+        margin-right: 20px;
+        font-size: 30px;
+        padding: 30px;
+        border: none;
+        border-radius: 50%;
+        width: 110px;
+        height: 110px;
+        cursor: pointer;
+        background-color: $white;
+      }
+
+      .active {
+        background-color: $aquamarine;
+      }
+
+    }
+  }
+
+  .btn-start {
+    background-color: $aquamarine;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    color: $white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+}

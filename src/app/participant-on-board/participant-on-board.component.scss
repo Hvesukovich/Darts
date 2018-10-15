@@ -1,0 +1,55 @@
+@import '../constants';
+
+.participant-on-board {
+  display: flex;
+  flex-direction: column;
+
+  .participant-name {
+    margin-bottom: 5px;
+  }
+
+  .input-block {
+    margin: 2px 0;
+    display: flex;
+    .throw {
+      padding: 5px 10px;
+      width: 50px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 18px;
+      float: left;
+    }
+
+    .error {
+      padding: 3px 8px;
+      border: 2px solid $red;
+    }
+
+    .block-btn {
+      background-color: $dark-grey;
+      padding: 2px;
+      height: 27px;
+      float: left;
+      border-radius: 0 10px 10px 0;
+      display: flex;
+
+      .btn {
+        height: 27px;
+        width: 27px;
+        border: none;
+        margin-left: 3px;
+        cursor: pointer;
+      }
+
+      .btn-right {
+        border-radius: 0 10px 10px 0;
+      }
+
+      .active {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+
+  }
+}

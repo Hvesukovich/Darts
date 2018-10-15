@@ -1,0 +1,16 @@
+<div class="participant-on-board">
+    <div class="participant-name">{{participant.nickName}}</div>
+    <div *ngFor="let throw of participant.throws[participant.throws.length - 1].steps"
+         class="input-block">
+        <input type="text" class="throw" [(ngModel)]="throw.points"
+               [class.error]="throw.error" (keyup)="validation(throw)">
+        <div class="block-btn">
+            <button *ngFor="let btn of getArrBtns(throw)"
+                    ngClass={{btn.classes}}
+                    [class.active]="throw.coefficient === btn.value"
+                    (click)="activeBtn(throw, btn.value)">
+                {{btn.value}}x
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+@import '../constants';
+
+.block-logo {
+  width: 180px;
+  color: $white;
+
+  .phrase-1 {
+    font-family: sans-serif;
+    font-size: 26px;
+  }
+  .phrase-2 {
+    margin-top: -10px;
+    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .copyright {
+    float: right;
+  }
+}

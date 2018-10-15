@@ -1,0 +1,78 @@
+.block-registration {
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+
+  .form-group {
+    margin: 15px 0;
+
+    .alert-danger {
+      color: #FFEB3B;
+      margin-top: 5px;
+    }
+  }
+
+  .logo {
+    margin: 10% auto 0;
+    display: table;
+  }
+
+  .phrase-3 {
+    display: table;
+    margin: 8% auto 0;
+  }
+
+  .form-registration {
+    width: 265px;
+    margin: 80px auto 0;
+
+    .title-nickname, .title-email {
+      display: block;
+    }
+
+    input {
+      padding: 7px 10px;
+      font-size: 20px;
+      border-radius: 4px;
+      border: 0;
+      margin-top: 3px;
+      width: calc(100% - 20px);
+    }
+
+    .send {
+      padding: 7px 10px;
+      font-size: 20px;
+      width: 100%;
+      border-radius: 4px;
+      border: 0;
+      margin-top: 40px;
+      background-color: #ffd726;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

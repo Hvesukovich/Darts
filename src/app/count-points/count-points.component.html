@@ -1,0 +1,67 @@
+<div class="content">
+    <div class="header">
+        <app-logo class="logo"></app-logo>
+
+        <div class="btn-block">
+            <button class="btn" (click)="newGame()">New game</button>
+        </div>
+    </div>
+
+    <div class="participants" [class.participants-hidden]="storageService.winners.length">
+        <div class="board-block">
+            <div class="block-throws">
+                <div *ngFor="let part of storageService.participants[0].throws[0].steps; let i = index"
+                     class="throws">
+                    Dart {{i + 1}}
+                </div>
+            </div>
+            <app-participant-on-board *ngFor="let participant of storageService.participants"
+                                      class="participant-throws"
+                                      [participant]="participant">
+            </app-participant-on-board>
+        </div>
+
+        <button class="btn-add-score" (click)="addPoints()">Add</button>
+    </div>
+    <div *ngIf="storageService.winners.length" class="winners-block">
+        <div class="winners-info">
+            <p *ngIf="storageService.winners.length === 1" class="winner-title">Победитель:</p>
+            <p *ngIf="storageService.winners.length > 1" class="winner-title">Победители:</p>
+            <span class="winner" *ngFor="let winner of storageService.winners">{{winner.nickName}}</span>
+        </div>
+    </div>
+    <div class="score-block">
+        <table>
+            <thead>
+                <tr>
+                    <th class="column-info"></th>
+                    <th *ngFor="let participant of storageService.participants"
+                        class="column-score"
+                        [style.width]="100/storageService.participants.length + '%'">
+                        {{participant.nickName}}
+                    </th>
+                    <th class="column-info"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let throw of storageService.arrThrows; let i = index">
+                    <td class="column-info">{{storageService.arrThrows.length - i}}</td>
+                    <td class="column-score"
+                        [style.width]="100/storageService.participants.length + '%'"
+                        *ngFor="let step of throw.steps">
+                        {{step.points}}
+                    </td>
+                    <td class="column-info">{{i + 1}}</td>
+                </tr>
+                <tr>
+                    <td class="column-info"></td>
+                    <td *ngFor="let participant of storageService.participants"
+                        class="column-score column-name-game">
+                        {{storageService.activeGames.value}}
+                    </td>
+                    <td class="column-info"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
